@@ -1,0 +1,12 @@
+image: node:10.16.1
+clone:
+  depth: full
+pipelines:
+  branches:
+    master:
+      - step:
+          caches:
+            - node
+          script:
+            - npm install
+            - git push -f https://blank:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master:master
