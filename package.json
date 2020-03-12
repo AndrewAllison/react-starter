@@ -32,6 +32,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:local": "./node_modules/.bin/env-cmd -f config/.env.local react-scripts start",
+    "start:prod": "./node_modules/.bin/env-cmd -f config/.env.production.local react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -62,6 +64,8 @@
     "@storybook/addon-links": "^5.3.14",
     "@storybook/addons": "^5.3.14",
     "@storybook/preset-create-react-app": "^2.0.0",
-    "@storybook/react": "^5.3.14"
+    "@storybook/react": "^5.3.14",
+    "cross-env": "^7.0.2",
+    "env-cmd": "^10.1.0"
   }
 }
